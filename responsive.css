@@ -1,0 +1,13 @@
+@media (max-width: 800px) {
+  .basket-wrapper {
+    display: none;
+  }
+  .menu-content{
+    width: 100% !important;
+  }
+}
+@media (max-width: 1920px) and (min-width: 800px) {
+  .cart-btn{
+    display: none;
+  }
+}

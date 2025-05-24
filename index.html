@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script src="./script.js"></script>
+    <script src="./db.js"></script>
+    <script src="./templates.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./fonts.css">
+    <link rel="stylesheet" href="./responsive.css">
+    <link rel="stylesheet" href="./basketstyle.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="./style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bestell App</title>
+</head>
+
+<body onload="init()">
+    <header>
+        <img class="logo" src="./Material/Logo/Bestell App- Logo.svg" alt="Logo">
+    </header>
+    <div class="cart-overlay" id="cart-overlay">
+        <h2>Warenkorb</h2>
+        <div id="overlayBasketContentRef"></div>
+        <div class="cart-footer">
+            <p class="cart-total">Gesamt: <span id="overlayTotalPrice">0,00 €</span></p>
+            <button class="checkout-btn">Zur Kasse</button>
+        </div>
+    </div>
+    <div class="content-wrapper">
+        <section class="menu-content" id="menu">
+        </section>
+        <section class="basket-wrapper">
+            <div class="basket-display" id="basketDisplay">
+                <h2 class="basket-headline">Warenkorb</h2>
+                <div class="basket-content-ref" id="basketContentRef">
+                    </div>
+                <div class="cart-footer">
+                    <p class="cart-total">Gesamt: <span id="totalPrice">0,00 €</span></p>
+                    <button class="checkout-btn">Zur Kasse</button>
+                </div>
+            </div>
+    </div>
+    </section>
+    <button id="cart-btn" class="cart-btn" onclick="toggleCartOverlay()">🛒 Warenkorb</button>
+    <footer>
+        AGB
+        Impressum
+    </footer>
+</body>
+
+</html>
