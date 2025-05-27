@@ -1,22 +1,22 @@
 let basket = [];
 
-function renderMenuTemplate(){
+function renderMenuTemplate() {
     let contentRef = document.getElementById("menu");
     contentRef.innerHTML = "";
 
     for (let i = 0; i < menu.length; i++) {
         let dish = menu[i]
-        contentRef.innerHTML += getTemplateMenu(dish,i);
+        contentRef.innerHTML += getTemplateMenu(dish, i);
     }
 }
 
-function renderBasketTemplate(){
+function renderBasketTemplate() {
     let contentRef = document.getElementById("basketContentRef");
     contentRef.innerHTML = "";
 
     for (let i = 0; i < basket.length; i++) {
         contentRef.innerHTML += getTemplateBasket(i);
-        
+
     }
 }
 
@@ -40,10 +40,10 @@ function addDishToBasket(i) {
         });
     }
 
-    updateCart();
+    updateBasket();
 }
 
-function updateCart() {
+function updateBasket() {
     let contentRef = "";
     let basketTotal = 0;
 
@@ -56,11 +56,13 @@ function updateCart() {
     document.getElementById("totalPrice").innerText = `${basketTotal.toFixed(2)} €`;
     document.getElementById("basketContentRef").innerHTML = contentRef;
     document.getElementById("overlayTotalPrice").innerText = `${basketTotal.toFixed(2)} €`;
+
+    localStorage.setItem('basket', JSON.stringify(basket));
 }
 
 function increaseQuantity(i) {
     basket[i].quantity++;
-    updateCart();
+    updateBasket();
 }
 
 function decreaseQuantity(i) {
@@ -69,16 +71,16 @@ function decreaseQuantity(i) {
     } else {
         basket.splice(i, 1);
     }
-    updateCart();
+    updateBasket();
 }
 
 function removeFromBasket(i) {
     basket.splice(i, 1);
-    updateCart();
+    updateBasket();
 }
 
-function toggleCartOverlay() {
-    const overlay = document.getElementById("cart-overlay");
+function toggleBasketOverlay() {
+    const overlay = document.getElementById("basket-overlay");
     if (overlay.style.display === "block") {
         overlay.style.display = "none";
     } else {
@@ -86,9 +88,19 @@ function toggleCartOverlay() {
     }
 }
 
+function clearBasket(i) {
+    basket.splice(i, 1);
+    localStorage.setItem('basket', JSON.stringify(basket));
+    updateBasket();
+}
+
 
 function init() {
-  renderMenuTemplate();
-  updateCart();
+    const savedBasket = localStorage.getItem('basket');
+    if (savedBasket) {
+        basket = JSON.parse(savedBasket);
+    }
+    renderMenuTemplate();
+    updateBasket();
 }
 
