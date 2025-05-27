@@ -16,6 +16,10 @@
   gap: 10px;
 }
 
+.review-number{
+  padding-top: 7px;
+}
+
 .logo {
   display: flex;
   flex-direction: column;
@@ -99,7 +103,7 @@ body {
   margin: 0;
 }
 
-.cart-overlay {
+.basket-overlay {
   display: none;
 }
 
@@ -121,7 +125,7 @@ header {
   border-bottom: 1px solid #ff8000;
 }
 
-.cart-btn {
+.basket-btn {
   margin-top: 100px;
 }
 
