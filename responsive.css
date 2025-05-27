@@ -6,8 +6,13 @@
     width: 100% !important;
   }
 }
+@media (max-width: 520px) {
+  .menu-item{
+    font-size: 10px;
+  }
+}
 @media (max-width: 1920px) and (min-width: 800px) {
-  .cart-btn{
+  .basket-btn{
     display: none;
   }
 }
