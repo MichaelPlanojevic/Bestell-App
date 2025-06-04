@@ -7,8 +7,24 @@ function getTemplateMenu(dish, i) {
                 <p>${dish.price.toFixed(2)} €</p>
                 <p>${dish.zutaten}</p>
             </div>
-            <button class="basket-button" onclick="addDishToBasket(${i})">+</button>
+            <button class="add-to-basket-btn" onclick="addDishToBasket(${i})">+</button>
         </div>
+    </div>
+    `;
+}
+
+function getRestaurantHeader() {
+    return `
+    <div class="restaurant-header">
+    <div class="photo-wrapper">
+    <img src="./Material/Logo/Main-Logo.png" alt="logo" class="main-logo">
+</div>
+      <img src="./Material/Imgs/chicken-6465555_1280.jpg" alt="Icon" class="header-img">
+      <h2 class="name-headline">Orientalis</h2>
+      <div class="recomms">
+        <h4 class="recomms-headline">Bewertung</h4> ★★★★☆ 
+        <span class="review-number">(4.3 / 5)</span>
+      </div>
     </div>
     `;
 }
@@ -18,7 +34,6 @@ function getTemplateBasket(i) {
     return `
     <div class="basket-item-details">
         <div class="basket-name">${item.name}</div>
-
     <div class="basket-controls">
         <button class="basket-button" onclick="decreaseQuantity(${i})">-</button>
         <span class="basket-quantity">${item.quantity}</span>
