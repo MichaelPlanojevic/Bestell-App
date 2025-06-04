@@ -22,14 +22,8 @@
     <header>
         <img class="logo" src="./Material/Logo/Bestell App- Logo.svg" alt="Logo">
     </header>
-    <img src="./Material/Imgs/chicken-6465555_1280.jpg" alt="Icon" class="header-img">
-    <h2>Orientalis</h2>
-    <div class="recomms" style="font-size: 1.5rem; color: rgb(201, 139, 6);">
-      <h4>Bewertung</h4>  ★★★★☆ <span class="review-number" style="color: #000; font-size: 1rem;">(4.3 / 5)</span>
-    </div>
-    <img src="./Material/Imgs/food-8336122_1280.jpg" alt="Logo" class="main-img">
     <div class="basket-overlay" id="basket-overlay">
-        <h2>Warenkorb</h2>
+        <h2 class="basket-overlay-name">Warenkorb</h2>
         <div id="overlayBasketContentRef"></div>
         <div class="basket-footer">
             <p class="basket-total">Gesamt: <span id="overlayTotalPrice">0,00 €</span></p>
@@ -37,20 +31,21 @@
         </div>
     </div>
     <div class="content-wrapper">
-        <section class="menu-content" id="menu">
-        </section>
-        <section class="basket-wrapper">
-            <div class="basket-display" id="basketDisplay">
-                <h2 class="basket-headline">Warenkorb</h2>
-                <div class="basket-content-ref" id="basketContentRef">
-                </div>
-                <div class="basket-footer">
-                    <p class="basket-total">Gesamt: <span id="totalPrice">0,00 €</span></p>
-                    <button class="checkout-btn">Zur Kasse</button>
-                </div>
-            </div>
+  <section class="main-content" id="menu">
+  </section>
+
+  <section class="basket-wrapper">
+    <div class="basket-display" id="basketDisplay">
+      <h2 class="basket-headline">Warenkorb</h2>
+      <div class="basket-content-ref" id="basketContentRef">
+      </div>
+      <div class="basket-footer">
+        <p class="basket-total">Gesamt: <span id="totalPrice">0,00 €</span></p>
+        <button class="checkout-btn">Zur Kasse</button>
+      </div>
     </div>
-    </section>
+  </section>
+</div>
     <button id="basket-btn" class="basket-btn" onclick="toggleBasketOverlay()">🛒 Warenkorb</button>
     <footer>
         AGB
