@@ -2,15 +2,24 @@
   .basket-wrapper {
     display: none;
   }
-  .menu-content{
+  .main-content{
     width: 100% !important;
   }
 }
 @media (max-width: 520px) {
-  .menu-item{
-    font-size: 10px;
-  }
+    .name-headline {
+        font-size: 12px;
+    }
+
+    .item-header h2 {
+        font-size: 14px;
+    }
+
+    .menu-item {
+        font-size: 12px !important;
+    }
 }
+
 @media (max-width: 1920px) and (min-width: 800px) {
   .basket-btn{
     display: none;
