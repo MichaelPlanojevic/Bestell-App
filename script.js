@@ -4,6 +4,8 @@ function renderMenuTemplate() {
     let contentRef = document.getElementById("menu");
     contentRef.innerHTML = "";
 
+    contentRef.innerHTML += getRestaurantHeader();
+
     for (let i = 0; i < menu.length; i++) {
         let dish = menu[i]
         contentRef.innerHTML += getTemplateMenu(dish, i);
