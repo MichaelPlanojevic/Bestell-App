@@ -39,6 +39,9 @@
   width: calc(100% - 301px);
 }
 
+.order-complete-message{
+  display: none;
+}
 .menu-item {
   display: flex;
   justify-content: space-between;
