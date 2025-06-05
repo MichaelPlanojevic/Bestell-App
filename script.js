@@ -90,8 +90,33 @@ function toggleBasketOverlay() {
     }
 }
 
+function orderComplete() {
+    const message = document.getElementById("orderCompleteMessage");
+    const messageOverlay = document.getElementById("orderCompleteMessageOverlay");
+    const cart = document.getElementById("basketContentRef");
+    const overlayCart = document.getElementById("overlayBasketContentRef");
+    
+    messageOverlay.style.display = "block";
+    messageOverlay.innerText = "Vielen Dank für Ihre Bestellung!";
+
+    message.style.display = "block";
+    message.innerText = "Vielen Dank für Ihre Bestellung!";
+
+    clearEntireBasket();
+
+    basketContentRef.innerHTML = "";
+    overlayBasketContentRef.innerHTML = "";
+}
+
+
 function clearBasket(i) {
     basket.splice(i, 1);
+    localStorage.setItem('basket', JSON.stringify(basket));
+    updateBasket();
+}
+
+function clearEntireBasket() {
+    basket = [];
     localStorage.setItem('basket', JSON.stringify(basket));
     updateBasket();
 }
