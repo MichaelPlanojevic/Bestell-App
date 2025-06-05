@@ -13,6 +13,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="./style.css">
+    <link rel="icon" href="./Material/Favicon/android-chrome-192x192.png" type="image/x-icon">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bestell App</title>
@@ -27,7 +28,8 @@
         <div id="overlayBasketContentRef"></div>
         <div class="basket-footer">
             <p class="basket-total">Gesamt: <span id="overlayTotalPrice">0,00 €</span></p>
-            <button class="checkout-btn">Zur Kasse</button>
+            <p id="orderCompleteMessageOverlay" class="order-complete-message">Danke für deine Bestellung !</p>
+            <button class="checkout-btn" onclick="orderComplete()">Jetzt Bestellen</button>
         </div>
     </div>
     <div class="content-wrapper">
@@ -41,7 +43,8 @@
       </div>
       <div class="basket-footer">
         <p class="basket-total">Gesamt: <span id="totalPrice">0,00 €</span></p>
-        <button class="checkout-btn">Zur Kasse</button>
+        <button class="checkout-btn" onclick="orderComplete()">Jetzt Bestellen</button>
+        <p id="orderCompleteMessage" class="order-complete-message">Danke für deine Bestellung !</p>
       </div>
     </div>
   </section>
