@@ -3,7 +3,6 @@ let basket = [];
 function renderMenuTemplate() {
     let contentRef = document.getElementById("menu");
     contentRef.innerHTML = "";
-
     contentRef.innerHTML += getRestaurantHeader();
 
     for (let i = 0; i < menu.length; i++) {
@@ -41,7 +40,6 @@ function addDishToBasket(i) {
             quantity: 1
         });
     }
-
     updateBasket();
 }
 
@@ -58,7 +56,6 @@ function updateBasket() {
     document.getElementById("totalPrice").innerText = `${basketTotal.toFixed(2)} €`;
     document.getElementById("basketContentRef").innerHTML = contentRef;
     document.getElementById("overlayTotalPrice").innerText = `${basketTotal.toFixed(2)} €`;
-
     localStorage.setItem('basket', JSON.stringify(basket));
 }
 
@@ -95,19 +92,14 @@ function orderComplete() {
     const messageOverlay = document.getElementById("orderCompleteMessageOverlay");
     const cart = document.getElementById("basketContentRef");
     const overlayCart = document.getElementById("overlayBasketContentRef");
-    
     messageOverlay.style.display = "block";
     messageOverlay.innerText = "Vielen Dank für Ihre Bestellung!";
-
     message.style.display = "block";
     message.innerText = "Vielen Dank für Ihre Bestellung!";
-
     clearEntireBasket();
-
     basketContentRef.innerHTML = "";
     overlayBasketContentRef.innerHTML = "";
 }
-
 
 function clearBasket(i) {
     basket.splice(i, 1);
@@ -120,7 +112,6 @@ function clearEntireBasket() {
     localStorage.setItem('basket', JSON.stringify(basket));
     updateBasket();
 }
-
 
 function init() {
     const savedBasket = localStorage.getItem('basket');
