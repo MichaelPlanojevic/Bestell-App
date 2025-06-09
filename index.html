@@ -24,13 +24,15 @@
         <img class="logo" src="./Material/Logo/Bestell App- Logo.svg" alt="Logo">
     </header>
     <div class="basket-overlay" id="basket-overlay">
+      <div class="basket-overlay-display" id="basketOverlayDisplay">
         <h2 class="basket-overlay-name">Warenkorb</h2>
-        <div id="overlayBasketContentRef"></div>
+        <div id="overlayBasketContentRef" class="overlay-basket-content-ref"></div>
         <div class="basket-footer">
             <p class="basket-total">Gesamt: <span id="overlayTotalPrice">0,00 €</span></p>
             <p id="orderCompleteMessageOverlay" class="order-complete-message">Danke für deine Bestellung !</p>
             <button class="checkout-btn" onclick="orderComplete()">Jetzt Bestellen</button>
         </div>
+    </div>
     </div>
     <div class="content-wrapper">
   <section class="main-content" id="menu">
